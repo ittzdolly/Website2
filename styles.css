@@ -5,7 +5,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f0f0f0; /* Optional: Set a background color */
 }
 
 .navbar {
@@ -30,19 +29,9 @@ body {
     margin: 0 20px;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: #333; /* Change color of the links */
-    font-weight: bold; /* Make the text bold */
-}
-
 .intro {
     text-align: center;
     margin-top: 70px; /* Ensure space below the fixed navbar */
-}
-
-.intro h1, .intro h2 {
-    margin: 10px 0;
 }
 
 .work-section {
