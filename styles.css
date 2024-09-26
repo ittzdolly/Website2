@@ -1,21 +1,23 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f8f9fa; /* Light background color */
 }
 
 .navbar {
-    background: rgba(200, 200, 200, 0.5); /* Blurry grey background */
-    backdrop-filter: blur(10px); /* Apply blur effect */
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+    backdrop-filter: blur(10px);
     width: 100%;
     text-align: center;
-    padding: 10px 0;
-    position: fixed; /* Fix the navbar at the top */
-    top: 0; /* Position it at the top */
-    z-index: 1000; /* Ensure it's above other elements */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 .navbar ul {
@@ -29,32 +31,59 @@ body {
     margin: 0 20px;
 }
 
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.navbar a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
 .intro {
     text-align: center;
-    margin-top: 70px; /* Ensure space below the fixed navbar */
+    margin-top: 80px; /* Space below the fixed navbar */
+}
+
+.intro h1 {
+    font-size: 2.5rem; /* Larger font size */
+    margin: 10px 0;
+}
+
+.intro h2 {
+    font-size: 1.5rem; /* Slightly smaller font size */
+    margin: 5px 0;
+    color: #555; /* Subtle color for the subtitle */
 }
 
 .work-section {
     text-align: center;
-    margin-top: 50px; /* Add space before this section */
+    margin-top: 50px;
+}
+
+.work-section h3 {
+    font-size: 2rem; /* Size for the section title */
+    margin-bottom: 20px;
 }
 
 .icons {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allow icons to wrap to the next line */
+    flex-wrap: wrap;
 }
 
 .icons a {
-    margin: 10px; /* Space between icons */
+    margin: 15px; /* More space between icons */
 }
 
 .icons img {
-    width: 50px; /* Set the width of the icons */
-    height: 50px; /* Set the height of the icons */
-    transition: transform 0.3s; /* Add transition for hover effect */
+    width: 60px; /* Larger icons */
+    height: 60px;
+    transition: transform 0.3s; /* Smooth scale transition */
 }
 
 .icons img:hover {
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.1); /* Scale effect on hover */
 }
