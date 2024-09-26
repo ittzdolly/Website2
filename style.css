@@ -1,83 +1,85 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    color: #f0f0f0;
+    background-color: #181818;
 }
 
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+.navbar {
     position: fixed;
+    top: 0;
     width: 100%;
-    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px;
 }
 
-nav ul {
+.navbar h1 {
+    float: left;
+}
+
+.navbar ul {
     list-style: none;
-    padding: 0;
+    float: right;
 }
 
-nav ul li {
+.navbar li {
     display: inline;
     margin: 0 15px;
 }
 
-nav a {
-    color: #ffffff;
+.navbar a {
+    color: #f0f0f0;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-h1, h2 {
-    margin: 0;
+.navbar a:hover {
+    color: #00aaff;
 }
 
-main {
-    padding: 80px 20px 20px; /* Added padding for the fixed header */
-}
-
-section {
-    background: #ffffff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    min-height: 300px; /* Ensuring a minimum height for sections */
-}
-
-.icon-container {
+.hero {
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    background-image: url('your_background_image.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.icon {
-    margin: 10px;
+.section {
+    padding: 60px 20px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    margin: 20px;
     transition: transform 0.3s;
 }
 
-.icon img {
-    width: 80px; /* Adjust size as needed */
-    height: 80px;
-}
-
-.icon:hover {
+.project:hover {
     transform: scale(1.1);
 }
 
-footer {
+.app-icon {
+    width: 100px; /* adjust as needed */
+    height: auto;
+}
+
+.footer {
     text-align: center;
-    padding: 10px 0;
-    background: #35424a;
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 40px 20px;
 }
