@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box; /* Ensure padding and margin are included in total width and height */
+}
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -5,19 +9,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f8f9fa; /* Light background color */
+    background-color: #f4f4f4; /* Light gray background */
 }
 
 .navbar {
-    background: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+    color: white; /* White text color */
     width: 100%;
     text-align: center;
     padding: 15px 0;
     position: fixed;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 .navbar ul {
@@ -33,57 +36,60 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: #333;
+    color: white; /* White link color */
     font-weight: bold;
     transition: color 0.3s; /* Smooth color transition */
 }
 
 .navbar a:hover {
-    color: #007BFF; /* Change color on hover */
+    color: #f0a500; /* Change color on hover */
 }
 
 .intro {
     text-align: center;
     margin-top: 80px; /* Space below the fixed navbar */
+    padding: 20px;
 }
 
 .intro h1 {
     font-size: 2.5rem; /* Larger font size */
     margin: 10px 0;
+    color: #333; /* Dark color for contrast */
 }
 
 .intro h2 {
     font-size: 1.5rem; /* Slightly smaller font size */
     margin: 5px 0;
-    color: #555; /* Subtle color for the subtitle */
+    color: #666; /* Subtle color for the subtitle */
 }
 
 .work-section {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 50px; /* Space before this section */
 }
 
 .work-section h3 {
     font-size: 2rem; /* Size for the section title */
     margin-bottom: 20px;
+    color: #333; /* Dark color for section title */
 }
 
 .icons {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allow icons to wrap to the next line */
 }
 
 .icons a {
-    margin: 15px; /* More space between icons */
+    margin: 15px; /* Space between icons */
 }
 
 .icons img {
-    width: 60px; /* Larger icons */
-    height: 60px;
-    transition: transform 0.3s; /* Smooth scale transition */
+    width: 60px; /* Set the width of the icons */
+    height: 60px; /* Set the height of the icons */
+    transition: transform 0.3s; /* Add transition for hover effect */
 }
 
 .icons img:hover {
-    transform: scale(1.1); /* Scale effect on hover */
+    transform: scale(1.1); /* Scale up on hover */
 }
