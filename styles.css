@@ -25,17 +25,17 @@ nav ul {
   display: flex;
   justify-content: center; /* Center the nav */
   list-style: none;
-  padding: 0;
 }
 
 nav ul li {
-  margin: 0 20px; /* Space out the items */
+  margin: 0 20px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 24px; /* Make the text larger */
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .hero {
@@ -63,13 +63,18 @@ nav ul li a {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: bold;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 p {
   font-size: 1.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .icons {
@@ -80,7 +85,7 @@ p {
 }
 
 .icons a img {
-  width: 100px;
+  width: 50px;
   transition: transform 0.2s ease;
 }
 
