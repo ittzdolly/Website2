@@ -1,17 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('path_to_your_background_image') no-repeat center center fixed;
-    background-size: cover;
+    background-color: #f4f4f4;
     color: #333;
 }
 
 header {
-    background: rgba(53, 66, 74, 0.9);
+    background: #35424a;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 nav ul {
@@ -34,18 +40,19 @@ h1, h2 {
 }
 
 main {
-    padding: 20px;
+    padding: 80px 20px 20px; /* Added padding for the fixed header */
 }
 
 section {
-    background: rgba(255, 255, 255, 0.8);
+    background: #ffffff;
     margin: 20px 0;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 300px; /* Ensuring a minimum height for sections */
 }
 
-.app-icons {
+.icon-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -57,8 +64,8 @@ section {
 }
 
 .icon img {
-    width: 80px; /* Adjust icon size */
-    height: auto;
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
 }
 
 .icon:hover {
@@ -68,7 +75,7 @@ section {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: rgba(53, 66, 74, 0.9);
+    background: #35424a;
     color: #ffffff;
     position: relative;
     bottom: 0;
