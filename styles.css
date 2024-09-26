@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box; /* Ensure padding and margin are included in total width and height */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 body {
@@ -16,7 +16,6 @@ body {
     background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
     color: white; /* White text color */
     width: 100%;
-    text-align: center;
     padding: 15px 0;
     position: fixed;
     top: 0;
