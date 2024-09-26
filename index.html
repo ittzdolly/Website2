@@ -3,51 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>My Portfolio</title>
+    <title>Your Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website!</h1>
-        <nav>
+    <nav class="navbar">
+        <div class="container">
+            <h1>Your Name</h1>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Showcasing my work and projects.</p>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>This is a brief description of myself. Here you can provide information about your skills, experience, or background.</p>
-        </section>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Your bio goes here. Share your background and skills.</p>
+    </section>
 
-        <section id="projects">
-            <h2>The Stuff I Work With</h2>
-            <div class="icon-container">
-                <a href="https://example.com/app1" class="icon">
-                    <img src="path/to/icon1.png" alt="App 1">
+    <section id="projects" class="section">
+        <h2>The Stuff I Work With</h2>
+        <div class="projects-grid">
+            <div class="project">
+                <a href="link_to_app" target="_blank">
+                    <img src="app_icon.png" alt="App Name" class="app-icon">
                 </a>
-                <a href="https://example.com/app2" class="icon">
-                    <img src="path/to/icon2.png" alt="App 2">
-                </a>
-                <a href="https://example.com/app3" class="icon">
-                    <img src="path/to/icon3.png" alt="App 3">
-                </a>
-                <!-- Add more icons as needed -->
             </div>
-        </section>
+            <!-- Add more project divs as needed -->
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>You can reach me at: <a href="mailto:example@example.com">example@example.com</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 My Portfolio</p>
+    <footer id="contact" class="footer">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
     </footer>
 
     <script src="script.js"></script>
