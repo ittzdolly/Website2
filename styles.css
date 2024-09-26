@@ -8,7 +8,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center items horizontally */
     background-color: #f4f4f4; /* Light gray background */
 }
 
@@ -76,7 +76,7 @@ body {
 
 .icons {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center icons */
     flex-wrap: wrap; /* Allow icons to wrap to the next line */
 }
 
