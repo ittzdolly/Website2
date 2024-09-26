@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  position: fixed;
+  position: fixed; /* Keep the header fixed at the top */
   top: 0;
   width: 100%;
   padding: 20px 0;
@@ -45,6 +45,7 @@ nav ul li a {
   justify-content: center;
   position: relative;
   background: url('background-image.jpg') center center / cover no-repeat;
+  padding-top: 80px; /* Add padding to avoid overlap with the fixed header */
 }
 
 .overlay {
