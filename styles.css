@@ -1,59 +1,48 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light background for contrast */
 }
 
 header {
-    background-color: grey;
-    padding: 10px 0;
+    background-color: grey; /* Grey background for the navigation */
 }
 
-nav ul {
-    list-style: none;
+.navbar {
+    text-align: center; /* Center navigation items */
+    padding: 20px; /* Add some padding */
 }
 
-nav li {
-    display: inline-block;
-    margin: 0 15px;
+.nav-title {
+    margin: 0; /* Remove default margin */
+    color: white; /* White text for visibility */
 }
 
-a {
-    text-decoration: none;
-    color: #333;
+.intro {
+    text-align: center; /* Center intro text */
+    margin-top: 50px; /* Space above the intro */
 }
 
-h1, h2 {
-    margin: 20px 0;
+.projects {
+    text-align: center; /* Center project section */
+    margin: 40px 0; /* Space around the project section */
 }
 
-.icons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.icon-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the icons */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 20px; /* Space between icons */
 }
 
-.icons a {
-    margin: 20px;
-    display: inline-block;
+.icon {
+    width: 80px; /* Set width for icons */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s; /* Smooth hover effect */
 }
 
-.icons img {
-    width: 60px;
-    transition: transform 0.3s, filter 0.5s, background-color 0.5s;
-    border-radius: 50%;
-}
-
-.icons img:hover {
-    transform: rotate(10deg) scale(1.15);  /* Slight rotation and scale up on hover */
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) hue-rotate(90deg);  /* Holographic hover effect */
-    background-color: rgba(255, 255, 255, 0.1);  /* Transparent background on hover */
+.icon:hover {
+    transform: scale(1.1); /* Scale icon on hover */
+    filter: brightness(0.8); /* Darken icon on hover */
 }
