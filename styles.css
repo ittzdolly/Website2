@@ -1,5 +1,11 @@
-body {
+/* Basic Reset */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #333;
@@ -13,11 +19,10 @@ header {
 
 nav ul {
     list-style: none;
-    padding: 0;
 }
 
 nav li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -37,15 +42,18 @@ h1, h2 {
 }
 
 .icons a {
-    margin: 10px;
+    margin: 20px;
+    display: inline-block;
 }
 
 .icons img {
-    width: 50px; /* Adjust the size as needed */
-    transition: transform 0.3s, filter 0.3s; /* Smooth transition for hover effect */
+    width: 60px;
+    transition: transform 0.3s, filter 0.5s, background-color 0.5s;
+    border-radius: 50%;
 }
 
 .icons img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)); /* Add a shadow effect on hover */
+    transform: rotate(10deg) scale(1.15);  /* Slight rotation and scale up on hover */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) hue-rotate(90deg);  /* Holographic hover effect */
+    background-color: rgba(255, 255, 255, 0.1);  /* Transparent background on hover */
 }
