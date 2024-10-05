@@ -1,55 +1,61 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f0f0f0, #d9d9d9);
 }
 
-.nav {
+header {
     background-color: grey;
-    padding: 15px;
-    width: 100%;
     text-align: center;
-    position: fixed; /* Keep the navigation fixed at the top */
-    top: 0;
-    z-index: 1000; /* Ensure it appears above other content */
 }
 
-.nav a {
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
     margin: 0 15px;
+}
+
+.navbar a {
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 60px); /* Adjust height for fixed nav */
-    margin-top: 60px; /* Space for fixed nav */
+h1, h2 {
     text-align: center;
 }
 
-h1, h2, h3 {
-    margin: 10px 0;
+.work-section {
+    text-align: center;
+    margin-top: 50px;
 }
 
-.icons {
+.icon-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    margin-top: 20px;
+    gap: 20px;
 }
 
-.icon {
-    width: 100px; /* Size of the icon */
-    height: 100px; /* Size of the icon */
-    transition: transform 0.3s, filter 0.3s; /* Smooth transition for effects */
-    margin: 10px; /* Space between icons */
+.icon-container a {
+    display: inline-block;
+    transition: transform 0.3s;
 }
 
-.icon:hover {
-    transform: scale(1.1); /* Scale effect on hover */
-    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.7)); /* Holographic effect */
+.icon-container img {
+    width: 80px; /* Adjust size as necessary */
+    height: auto;
+}
+
+.icon-container a:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
