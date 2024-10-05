@@ -58,20 +58,3 @@ h1, h2 {
     transform: scale(1.1);
     filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 1));
 }
-
-/* Background video */
-body {
-    margin: 0;
-    padding: 0;
-    background: none;
-    overflow: hidden;
-}
-
-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    z-index: -1;
-}
