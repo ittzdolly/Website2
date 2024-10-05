@@ -1,62 +1,92 @@
-.navbar {
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    width: 100%;
-    padding: 15px 0;
+body {
+    background-color: #f0f0f0; /* Light grey background */
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.8); /* White background with opacity */
+    padding: 15px;
+    text-align: center;
     position: fixed;
+    width: 100%;
     top: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center; /* Center the navbar */
-}
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.navbar li {
-    position: relative; /* Needed for dropdown */
-    margin: 0 20px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #f0a500;
-}
-
-.dropdown-menu {
-    display: none; /* Initially hidden */
-    position: absolute;
-    top: 100%; /* Position it below the "Home" link */
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Same background as navbar */
-    padding: 10px 0;
-    list-style: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow */
+    z-index: 10; /* Ensures the nav stays on top */
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block; /* Show dropdown on hover */
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333; /* Dark text */
+    font-weight: bold;
 }
 
-.dropdown-menu li {
-    margin: 0;
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
 
-.dropdown-menu a {
+h1 {
+    text-align: center;
+    margin-top: 80px; /* Adjust for the fixed navbar */
+    color: #333; /* Dark text */
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+._iconContainer_krnpm_12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px; /* Space between icons */
+    cursor: pointer; /* Hand cursor for icons */
+    transition: transform 0.2s; /* Smooth scaling */
+}
+
+._iconContainer_krnpm_12:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+._icon_krnpm_5 {
+    width: 64px; /* Set icon size */
+    height: 64px; /* Set icon size */
+    margin-bottom: 5px; /* Space between icon and label */
+}
+
+.icon-container p {
+    font-size: 14px; /* Smaller font for labels */
+    color: #333; /* Dark text */
+}
+
+/* Dropdown styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
     display: block;
-    padding: 10px 20px;
-    white-space: nowrap;
 }
 
-.dropdown-menu a:hover {
-    background-color: #333; /* Highlight the hovered item */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item:hover .dropdown-content {
+    display: block;
 }
