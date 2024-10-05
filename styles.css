@@ -1,95 +1,62 @@
-* {
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    background-color: #f4f4f4; /* Light gray background */
-}
-
 .navbar {
-    background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
-    color: white; /* White text color */
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
     width: 100%;
     padding: 15px 0;
     position: fixed;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: center; /* Center the navbar */
 }
 
 .navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center links horizontally */
+    display: flex;
 }
 
 .navbar li {
-    margin: 0 20px; /* Space between links */
+    position: relative; /* Needed for dropdown */
+    margin: 0 20px;
 }
 
 .navbar a {
     text-decoration: none;
-    color: white; /* White link color */
+    color: white;
     font-weight: bold;
-    transition: color 0.3s; /* Smooth color transition */
+    transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color: #f0a500; /* Change color on hover */
+    color: #f0a500;
 }
 
-.intro {
-    text-align: center;
-    margin-top: 80px; /* Space below the fixed navbar */
-    padding: 20px;
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Position it below the "Home" link */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Same background as navbar */
+    padding: 10px 0;
+    list-style: none;
 }
 
-.intro h1 {
-    font-size: 2.5rem; /* Larger font size */
-    margin: 10px 0;
-    color: #333; /* Dark color for contrast */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown on hover */
 }
 
-.intro h2 {
-    font-size: 1.5rem; /* Slightly smaller font size */
-    margin: 5px 0;
-    color: #666; /* Subtle color for the subtitle */
+.dropdown-menu li {
+    margin: 0;
 }
 
-.work-section {
-    text-align: center;
-    margin-top: 50px; /* Space before this section */
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    white-space: nowrap;
 }
 
-.work-section h3 {
-    font-size: 2rem; /* Size for the section title */
-    margin-bottom: 20px;
-    color: #333; /* Dark color for section title */
-}
-
-.icons {
-    display: flex;
-    justify-content: center; /* Center icons */
-    flex-wrap: wrap; /* Allow icons to wrap to the next line */
-}
-
-.icons a {
-    margin: 15px; /* Space between icons */
-}
-
-.icons img {
-    width: 60px; /* Set the width of the icons */
-    height: 60px; /* Set the height of the icons */
-    transition: transform 0.3s; /* Add transition for hover effect */
-}
-
-.icons img:hover {
-    transform: scale(1.1); /* Scale up on hover */
+.dropdown-menu a:hover {
+    background-color: #333; /* Highlight the hovered item */
 }
