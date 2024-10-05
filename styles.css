@@ -1,113 +1,77 @@
-/* Video background */
-#background-video {
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Top bar styles */
+.top-bar {
+    background-color: grey;
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Centering content */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+/* Styling the icons */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.icon-container img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.7));
+}
+
+.icon-container img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 1));
+}
+
+/* Background video */
+body {
+    margin: 0;
+    padding: 0;
+    background: none;
+    overflow: hidden;
+}
+
+video {
     position: fixed;
     right: 0;
     bottom: 0;
-    min-width: 100%;
+    min-width: 100%; 
     min-height: 100%;
-    z-index: -1; /* Keep it behind the content */
-    object-fit: cover;
-    filter: brightness(0.6); /* Darken video to enhance text visibility */
-}
-
-/* Navbar with blurry background */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(128, 128, 128, 0.5); /* Transparent grey */
-    backdrop-filter: blur(10px); /* Blurry background */
-    z-index: 2; /* Ensure it's above the video */
-    text-align: center;
-}
-
-.navbar nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.navbar nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-/* Dropdown hover menu */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background: rgba(128, 128, 128, 0.7); /* Slightly darker background */
-    padding: 10px;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Content section */
-.content {
-    position: relative;
-    z-index: 1; /* Content above video */
-    text-align: center;
-    color: white;
-    margin-top: 150px; /* Adjust for the navbar */
-}
-
-/* Icon container styling */
-.icon-container {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-/* Icon styles */
-._iconContainer_krnpm_12 {
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 120px;
-    height: 120px;
-    background: transparent;
-    position: relative;
-}
-
-._iconContainer_krnpm_12:hover {
-    transform: scale(1.15);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 255, 255, 0.6);
-}
-
-._iconContainer_krnpm_12::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: inherit;
-    background: linear-gradient(45deg, rgba(255, 0, 255, 0.3), rgba(0, 255, 255, 0.3));
-    filter: blur(20px);
-    opacity: 0;
     z-index: -1;
-    transition: opacity 0.3s ease;
-}
-
-._iconContainer_krnpm_12:hover::before {
-    opacity: 1;
-}
-
-._icon_krnpm_5 {
-    width: 50px;
-    height: auto;
-}
-
-.icon-container p {
-    margin-top: 12px;
-    font-size: 14px;
-    color: #fff;
 }
