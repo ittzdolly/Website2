@@ -3,58 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Your Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation menu with blurry background -->
-    <header class="navbar">
-        <nav>
-            <ul>
-                <li><a href="#" class="dropdown">Home</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#projects">Projects</a></li>
-                    </ul>
-                </li>
-            </ul>
+    <div class="top-bar">
+        <nav class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
-    </header>
+    </div>
 
-    <!-- Video background -->
-    <video autoplay muted loop id="background-video">
-        <source src="your-video-file.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <!-- Your content -->
     <div class="content">
         <h1>Hello there</h1>
         <h2>My name is Dolly</h2>
-        <div class="icon-container">
-            <!-- Icons go here -->
-            <div class="_iconContainer_krnpm_12">
-                <img src="cloudflare.png" class="_icon_krnpm_5" alt="Cloudflare">
-                <p>Cloudflare</p>
-            </div>
-            <div class="_iconContainer_krnpm_12">
-                <img src="python.png" class="_icon_krnpm_5" alt="Python">
-                <p>Python</p>
-            </div>
-            <div class="_iconContainer_krnpm_12">
-                <img src="lua.png" class="_icon_krnpm_5" alt="Lua">
-                <p>Lua</p>
-            </div>
-            <div class="_iconContainer_krnpm_12">
-                <img src="vscode.png" class="_icon_krnpm_5" alt="VSCode">
-                <p>VSCode</p>
-            </div>
-            <div class="_iconContainer_krnpm_12">
-                <img src="github.png" class="_icon_krnpm_5" alt="GitHub">
-                <p>GitHub</p>
+
+        <div class="stuff-container">
+            <h3>Things I work with</h3>
+            <div class="icon-container">
+                <img src="cloudflare.png" alt="Cloudflare">
+                <img src="python.png" alt="Python">
+                <img src="lua.png" alt="Lua">
+                <img src="vscode.png" alt="VSCode">
+                <img src="github.png" alt="GitHub">
             </div>
         </div>
     </div>
-    
-    <script src="script.js"></script>
 </body>
 </html>
