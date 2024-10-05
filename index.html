@@ -3,39 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Your Website Title</title>
 </head>
 <body>
-    <!-- Top Bar with Navigation -->
-    <div class="top-bar">
-        <nav class="nav-menu">
-            <a href="#home">Home</a>
-            <a href="#projects">Projects</a>
+    <header>
+        <nav class="navbar">
+            <h1 class="nav-title">Home</h1>
         </nav>
-    </div>
-
-    <!-- Placeholder text below navigation -->
-    <div class="placeholder-text">
-        <p>This is some placeholder text just below the navigation bar. Feel free to change this.</p>
-    </div>
-
-    <!-- Main Content Section -->
-    <div class="content">
-        <h1>Hello there</h1>
-        <h2>My name is Dolly</h2>
-
-        <!-- Section for "What I work with" -->
-        <h3>What I work with</h3>
-
-        <!-- Icons Section -->
-        <div class="icon-container">
-            <img src="yourpngfile.png" alt="Cloudflare Icon">
-            <img src="yourpngfile.png" alt="Python Icon">
-            <img src="yourpngfile.png" alt="Lua Icon">
-            <img src="yourpngfile.png" alt="VSCode Icon">
-            <img src="yourpngfile.png" alt="GitHub Icon">
+    </header>
+    
+    <main>
+        <div class="intro">
+            <h2>Hello there</h2>
+            <h3>My name is Dolly</h3>
         </div>
-    </div>
+
+        <section class="projects">
+            <h2>Things I work with</h2>
+            <div class="icon-container">
+                <a href="https://www.cloudflare.com" target="_blank">
+                    <img src="cloudflare.svg" alt="Cloudflare Icon" class="icon" />
+                </a>
+                <a href="https://www.python.org" target="_blank">
+                    <img src="python.svg" alt="Python Icon" class="icon" />
+                </a>
+                <a href="https://www.lua.org" target="_blank">
+                    <img src="lua.svg" alt="Lua Icon" class="icon" />
+                </a>
+                <a href="https://code.visualstudio.com" target="_blank">
+                    <img src="vscode.svg" alt="VSCode Icon" class="icon" />
+                </a>
+                <a href="https://github.com" target="_blank">
+                    <img src="github.svg" alt="GitHub Icon" class="icon" />
+                </a>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
