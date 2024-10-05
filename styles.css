@@ -1,48 +1,55 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f0f0f0; /* Light background for contrast */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
-header {
-    background-color: grey; /* Grey background for the navigation */
+.nav {
+    background-color: grey;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    position: fixed; /* Keep the navigation fixed at the top */
+    top: 0;
+    z-index: 1000; /* Ensure it appears above other content */
 }
 
-.navbar {
-    text-align: center; /* Center navigation items */
-    padding: 20px; /* Add some padding */
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
-.nav-title {
-    margin: 0; /* Remove default margin */
-    color: white; /* White text for visibility */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px); /* Adjust height for fixed nav */
+    margin-top: 60px; /* Space for fixed nav */
+    text-align: center;
 }
 
-.intro {
-    text-align: center; /* Center intro text */
-    margin-top: 50px; /* Space above the intro */
+h1, h2, h3 {
+    margin: 10px 0;
 }
 
-.projects {
-    text-align: center; /* Center project section */
-    margin: 40px 0; /* Space around the project section */
-}
-
-.icon-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the icons */
-    flex-wrap: wrap; /* Allow wrapping */
-    gap: 20px; /* Space between icons */
+.icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 20px;
 }
 
 .icon {
-    width: 80px; /* Set width for icons */
-    height: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s; /* Smooth hover effect */
+    width: 100px; /* Size of the icon */
+    height: 100px; /* Size of the icon */
+    transition: transform 0.3s, filter 0.3s; /* Smooth transition for effects */
+    margin: 10px; /* Space between icons */
 }
 
 .icon:hover {
-    transform: scale(1.1); /* Scale icon on hover */
-    filter: brightness(0.8); /* Darken icon on hover */
+    transform: scale(1.1); /* Scale effect on hover */
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.7)); /* Holographic effect */
 }
