@@ -1,48 +1,87 @@
-/* Basic reset for margins and padding */
-* {
+/* Video background */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Keep it behind the content */
+    object-fit: cover;
+    filter: brightness(0.6); /* Darken video to enhance text visibility */
+}
+
+/* Navbar with blurry background */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.5); /* Transparent grey */
+    backdrop-filter: blur(10px); /* Blurry background */
+    z-index: 2; /* Ensure it's above the video */
+    text-align: center;
+}
+
+.navbar nav ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Set up the body style */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7; /* Light background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    flex-direction: column;
+.navbar nav ul li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
-/* Container for the icons */
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Dropdown hover menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: rgba(128, 128, 128, 0.7); /* Slightly darker background */
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Content section */
+.content {
+    position: relative;
+    z-index: 1; /* Content above video */
+    text-align: center;
+    color: white;
+    margin-top: 150px; /* Adjust for the navbar */
+}
+
+/* Icon container styling */
 .icon-container {
+    margin-top: 50px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; /* Space between the icons */
+    gap: 30px;
 }
 
-/* Icon box styling */
+/* Icon styles */
 ._iconContainer_krnpm_12 {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 120px;
     height: 120px;
-    border-radius: 15px;
-    background: transparent; /* Transparent background */
-    position: relative; /* For pseudo-elements */
+    background: transparent;
+    position: relative;
 }
 
-/* Hover effect to make icons appear holographic */
 ._iconContainer_krnpm_12:hover {
     transform: scale(1.15);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 255, 255, 0.6);
 }
 
-/* Holographic background effect */
 ._iconContainer_krnpm_12::before {
     content: '';
     position: absolute;
@@ -62,31 +101,13 @@ body {
     opacity: 1;
 }
 
-/* The icons themselves */
 ._icon_krnpm_5 {
-    width: 50px; /* Size of the icon */
+    width: 50px;
     height: auto;
 }
 
-/* Text under the icons */
-._iconContainer_krnpm_12 p {
+.icon-container p {
     margin-top: 12px;
     font-size: 14px;
-    color: #333; /* Dark grey for text */
-}
-
-/* Make sure the icon container scales properly on small screens */
-@media (max-width: 600px) {
-    ._iconContainer_krnpm_12 {
-        width: 90px;
-        height: 90px;
-    }
-
-    ._icon_krnpm_5 {
-        width: 40px;
-    }
-
-    ._iconContainer_krnpm_12 p {
-        font-size: 12px;
-    }
+    color: #fff;
 }
