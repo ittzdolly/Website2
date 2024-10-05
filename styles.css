@@ -1,61 +1,51 @@
 body {
-    font-family: Manrope, normal;
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom right, #f0f0f0, #d9d9d9);
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
 }
 
 header {
     background-color: grey;
-    text-align: center;
+    padding: 10px 0;
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-}
-
-.navbar ul {
-    list-style-type: none;
+nav ul {
+    list-style: none;
     padding: 0;
 }
 
-.navbar li {
+nav li {
+    display: inline;
     margin: 0 15px;
 }
 
-.navbar a {
+a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
+    color: #333;
 }
 
 h1, h2 {
-    text-align: center;
+    margin: 20px 0;
 }
 
-.work-section {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.icon-container {
+.icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.icon-container a {
-    display: inline-block;
-    transition: transform 0.3s;
+.icons a {
+    margin: 10px;
 }
 
-.icon-container img {
-    width: 80px; /* Adjust size as necessary */
-    height: auto;
+.icons img {
+    width: 50px; /* Adjust the size as needed */
+    transition: transform 0.3s, filter 0.3s; /* Smooth transition for hover effect */
 }
 
-.icon-container a:hover {
-    transform: scale(1.1);
-    filter: brightness(1.2);
+.icons img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)); /* Add a shadow effect on hover */
 }
